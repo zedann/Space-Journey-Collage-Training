@@ -1,0 +1,205 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Lobster', cursive;
+
+}
+#myVideo{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: 0;
+}
+header{
+    position: absolute;
+    z-index: 10;
+    width: 100%;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    padding: 50px 100px;
+}
+header h1{
+    letter-spacing: 3px;
+    color: #fff;
+    pointer-events: none;
+}
+header ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+}
+header ul li {
+    margin-left: 40px;
+}
+header ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 20px;
+    padding: 5px 15px;
+    border-radius: 20px;
+}
+header ul li a.active , header ul li a:hover{
+    background-color: #fff;
+    color: rgb(9, 9, 120);
+}
+.text {
+position: absolute;
+display: block;
+z-index: 2;
+top: 50%;
+left: 150px;
+transform: translateY(-50%);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.text.vanish{
+    display: none;
+}
+.text h1{
+    width: 400px;
+    color: #fff;
+    font-size: 70px;
+    line-height: 1.2;
+    
+}
+.text button{
+    margin-top: 30px;
+    width: 300px;
+    padding: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(78, 54, 174);
+    color: #fff;
+    font-size: 30px;
+    
+}
+.text button:hover{
+    background-color: rgb(62, 46, 101);
+}
+.text h1 span {
+    background-image: url(space.PNG);
+    background-repeat: no-repeat;
+    background-size: 345px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;  
+}
+.trip{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 2;
+    color: #fff;
+    letter-spacing: 10px;
+    text-align: center;
+    width: fit-content;
+    opacity: 0;
+    transition: all 0.3s 1s;
+    pointer-events: none;
+}
+.trip h1{
+    font-size: 50px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    text-shadow: 2px 2px #000;
+
+}
+.trip span {
+    font-size: 130px;
+    margin-top: 40px;
+    color: rgb(7, 7,228);
+    display: inline-block;
+}
+.space{
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    z-index: 2;
+    transform: translateX(-50%);
+    color: #fff;
+    letter-spacing: 10px;
+    text-align: center;
+    width: fit-content;
+    transition: all 0.3s 1s;
+    display: none;
+    pointer-events: none;
+}
+.space h1{
+    overflow: hidden;
+    border-right: 0.15em solid rgb(37, 129, 42);
+    white-space: nowrap;
+    text-shadow: 2px 2px rgb(14, 152, 26);
+    margin: 0 auto;
+    letter-spacing: 0.7em;
+    font-size: 50px;
+    animation: typing 3.5s steps(40,end),
+            blink-caret .75s step-end infinite;
+
+    
+}
+@keyframes typing {
+    from{
+        width: 0;
+    }
+    to{
+        width: 100%;
+    }
+}
+@keyframes blink-caret {
+    from,to{
+        border-color: transparent;
+    }
+    50%{
+        border-color: rgb(37, 129, 42);
+    }
+}
+.return {
+position: absolute;
+display: none;
+z-index: 2;
+top: 50%;
+left: 150px;
+transform: translateY(-50%);
+font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+
+}
+.return h1{
+    width: 400px;
+    color: #fff;
+    font-size: 70px;
+    line-height: 1.2;
+    
+}
+.return button{
+    margin-top: 30px;
+    width: 300px;
+    padding: 20px;
+    cursor: pointer;
+    border: none;
+    border-radius: 20px;
+    background-color: rgb(14, 152, 26);
+    color: #fff;
+    font-size: 30px;
+}
+.return button:hover{
+ background-color: rgb(37, 95, 19);
+}
+.return span {
+    background-image: url(ground.jpg);
+    background-repeat: no-repeat;
+    background-size: 345px;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: transparent;
+}
